@@ -6,9 +6,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Home/Index');
-});
+Route::get('/', [AuthController::class, 'index'])->name('login');
 
 // Register
 Route::get('/auth/register', [RegisterController::class, 'index'])->name('register');

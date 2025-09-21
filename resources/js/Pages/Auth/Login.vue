@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "../../components/ui/input"
 import { Label } from "../../components/ui/label"
 import { ref } from "vue"
-import { useForm } from "@inertiajs/vue3"
+import { useForm, Link } from "@inertiajs/vue3"
 
 const form = useForm({
     email: "",
@@ -54,6 +54,12 @@ const submit = () => {
                         <Button class="w-full" type="submit">
                             Login
                         </Button>
+                    </div>
+                    <div class="mt-4 text-center text-sm">
+                        Don't have an account?
+                        <Link href="/auth/register" class="underline">
+                            Sign up
+                        </Link>
                     </div>
                 </form>
             </CardContent>
